@@ -1,0 +1,154 @@
+/* Global */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR  */
+.navbar {
+    background: #ffffff;
+    padding: 18px 0;
+    transition: 0.3s ease;
+    font-size: 18px;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: rgb(10, 10, 48) !important;
+
+}
+
+.nav-item{
+    font-weight: 700;
+}
+
+.nav-link {
+    color: rgb(14, 14, 52) !important;
+    margin-left: 20px;
+    position: relative;
+}
+
+/* Hover underline animation */
+.nav-link::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #111;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Cart badge */
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    font-size: 10px;
+}
+
+/* Search bar */
+.search-box {
+    width: 280px;
+}
+
+/* Sticky effect */
+.sticky-top {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+
+
+    /* styling product card and making the image fit inside the card */
+.product-card {
+    transition: all 0.3s ease;
+    height:100%;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.08);
+}
+
+.product-img {
+    transition: transform 0.4s ease;
+    height:220px;
+    width:100%;
+    object-fit:contain;
+    background:#f8f9fa;
+    padding:10px;
+}
+
+
+.product-card:hover .product-img {
+    transform: scale(1.08);
+}
+
+.product-overlay {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    bottom: 20px;
+}
+
+
+/* TESTIMONIAL */
+
+.testimonial{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+max-width:600px;
+margin:auto;
+}
+
+.testimonial img{
+width:80px;
+height:80px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+.testimonial .stars{
+color:#f5b301;
+font-size:18px;
+margin-bottom:10px;
+}
+
+/* Footer styling */
+.footer-link{
+color:#bbb;
+text-decoration:none;
+display:block;
+margin-bottom:8px;
+transition:0.3s;
+}
+
+.footer-link:hover{
+color:#fff;
+padding-left:5px;
+}
+
+
+
+
