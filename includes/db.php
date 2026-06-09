@@ -5,20 +5,12 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->safeLoad();
 
-$host = $_ENV['DB_HOST'] ?? '';
-$port = $_ENV['DB_PORT'] ?? 3306;
-$user = $_ENV['DB_USER'] ?? '';
-$password = $_ENV['DB_PASSWORD'] ?? '';
-$database = $_ENV['DB_NAME'] ?? '';
+echo "<pre>";
 
-$conn = new mysqli(
-    $host,
-    $user,
-    $password,
-    $database,
-    (int)$port
-);
+echo "DB_HOST via getenv(): ";
+var_dump(getenv('DB_HOST'));
 
-if ($conn->connect_error) {
-    die("Database connection failed: " . $conn->connect_error);
-}
+echo "DB_HOST via _ENV: ";
+var_dump($_ENV['DB_HOST'] ?? null);
+
+exit;
