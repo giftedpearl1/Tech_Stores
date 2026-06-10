@@ -107,10 +107,10 @@ if(isset($_POST['place_order'])){
 
     // Flutterwave Payment Request
 
-    $flutterwave_secret = $_ENV['FLUTTERWAVE_SECRET_KEY'];
+    $flutterwave_secret = getenv('FLUTTERWAVE_SECRET_KEY');
     
     // Redirect after payment
-    $redirect_url = "http://localhost/capstone_project/electronic_stores/verify_payment.php";
+    $redirect_url = "https://techstores-production.up.railway.app/verify_payment.php";
 
     $payload = [
 

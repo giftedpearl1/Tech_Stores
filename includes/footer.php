@@ -37,6 +37,26 @@
     box-shadow:0 5px 15px rgba(0,0,0,0.2);
     }
 
+    /* Footer mobile */
+        @media (max-width:768px){
+        footer .row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-brand {
+            order: 4;
+        }
+
+        footer {
+        text-align: center;
+        }
+
+        footer .d-flex.gap-3 {
+            justify-content: center;
+        }
+    }
+   
 </style>
 
 
@@ -46,7 +66,7 @@
         <div class="row">
 
             <!-- BRAND -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4 footer-brand">
                 <h5 class="fw-bold">TechStore</h5>
                 <p class="text-muted">
                 Your trusted store for premium electronics, gadgets and accessories.

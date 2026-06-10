@@ -204,6 +204,76 @@
     margin-bottom:10px;
     }
 
+    @media (max-width: 768px) {
+        .floating-actions {
+            position: fixed;
+            right: 15px;
+            left: auto;
+            top: auto;
+            bottom: 20px;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+        }
+    }
+
+    /* FLASH SALE MOBILE */
+    .flash-hero h1 {
+        font-size: 2rem;
+    }
+
+    .flash-hero p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .flash-box {
+        width: 75px;
+        padding: 12px;
+    }
+
+    .flash-box h2 {
+        font-size: 20px;
+    }
+
+    .flash-countdown {
+        gap: 10px;
+    }
+
+    /* NEWSLETTER MOBILE */
+    .bg-dark form {
+        row-gap: 12px;
+    }
+
+    .bg-dark form .col-md-4,
+    .bg-dark form .col-md-2 {
+        width: 100%;
+    }
+
+    .bg-dark form button {
+        height: 50px;
+    }
+
+    /* CONTACT MOBILE */
+    @media (max-width:768px){
+        .py-5 .col-md-6:last-child {
+            margin-top: 30px;
+        }
+
+        .category-card {
+        padding: 20px 10px !important;
+        }
+
+        .category-card h5 {
+            font-size: 16px;
+        }
+    }
+
 </style>
 
 
@@ -242,7 +312,7 @@
                     </a>
                 </div>
 
-                <div class="mt-5 d-flex">
+                <div class="mt-5 d-flex flex-wrap gap-3">
                     <div class="me-4">🚚 Free Shipping</div>
                     <div class="me-4">✔ Quality Guarantee</div>
                     <div>🎧 24/7 Support</div>
@@ -293,7 +363,7 @@
 
             <?php while($cat = $categories->fetch_assoc()){ ?>
 
-            <div class="col-md-3 mb-4">
+            <div class="col-6 col-md-3 mb-4">
                 <a href="shop.php?category=<?php echo $cat['id']; ?>" class="text-decoration-none">
                     <div class="card category-card border-0 shadow-sm p-4 text-center">
                         <h5 class="fw-bold">
@@ -361,7 +431,7 @@
         <h3 class="fw-bold text-center mb-5">Featured Products</h3>
         <div class="row">
             <?php while($product = $products->fetch_assoc()){ ?>
-            <div class="col-md-3 mb-4">
+            <div class="col-6 col-md-3 mb-4">
                 <div class="card product-card border-0 h-100">
                     <img src="./Admin/assets/uploads/<?php echo $product['image']; ?>"
                     class="card-img-top"
